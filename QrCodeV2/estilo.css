@@ -1,0 +1,64 @@
+:root {
+  --azul-escuro: #131921;
+  --laranja: #ff9900;
+  --amarelo-botao: #ffd814;
+  --fundo: #eaeded;
+  --borda: #d5d9d9;
+  --texto: #0f1111;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; font-family: "Segoe UI", Arial, sans-serif; background: var(--fundo); color: var(--texto); }
+
+.faixa-autor { background: #0b0f14; color: #ccc; font-size: 12px; padding: 4px 20px; text-align: left; }
+
+.topo { background: var(--azul-escuro); color: #fff; display: flex; align-items: center; gap: 20px; padding: 10px 20px; }
+.logo-area { display: flex; align-items: center; min-width: 130px; }
+#logo { height: 55px; display: block; }
+.marca { font-size: 22px; font-weight: 700; }
+.marca b { color: var(--laranja); }
+.barra-central { flex: 1; height: 42px; background: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; border-right: 44px solid var(--laranja); }
+.topo-direita { font-size: 13px; font-weight: 700; white-space: nowrap; }
+
+.subtopo { background: #232f3e; height: 38px; }
+
+.banner { height: 230px; background: linear-gradient(100deg, #fbe9c0 0%, #fbe9c0 55%, #f6c9d8 55%, #f6c9d8 100%); display: flex; align-items: center; padding: 0 8%; }
+.banner-texto h1 { margin: 0; font-size: 34px; color: #232f3e; }
+
+main { width: 100%; max-width: 1200px; margin: -110px auto 0; padding: 0 20px 20px; position: relative; }
+.rodape { background: #232f3e; color: #ddd; text-align: left; font-size: 12px; padding: 14px 20px; margin-top: auto; }
+
+.layout { display: grid; grid-template-columns: 300px 1fr; gap: 20px; align-items: start; }
+@media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }
+
+.card { background: #fff; border: 1px solid var(--borda); border-radius: 8px; padding: 18px; margin-bottom: 20px; }
+h2 { margin: 0 0 12px; font-size: 18px; }
+.legenda { font-size: 12px; color: #565959; margin: 8px 0 0; }
+#previa { width: 100%; display: block; border-radius: 12px; }
+
+textarea { width: 100%; padding: 10px; font: 14px Consolas, monospace; border: 1px solid #888; border-radius: 8px; }
+.acoes { margin-top: 10px; display: flex; align-items: center; gap: 12px; }
+progress { width: 100%; height: 12px; margin-top: 12px; accent-color: var(--laranja); }
+#mensagem { margin-top: 8px; font-size: 14px; }
+.erro { color: #b12704; }
+
+button { font-family: inherit; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.btn-amarelo, .btn-laranja { border-radius: 20px; padding: 9px 22px; font-size: 15px; cursor: pointer; color: var(--texto); }
+.btn-amarelo { background: var(--amarelo-botao); border: 1px solid #fcd200; }
+.btn-amarelo:hover:enabled { background: #f7ca00; }
+.btn-laranja { background: #ffa41c; border: 1px solid #ff8f00; margin-bottom: 14px; }
+
+/* Botões dos dias: a cor de cada um vem do arquivo codigos.js */
+.dias { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; align-items: start; }
+.btn-dia { width: 100%; height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 14px 0 0; border: none; border-radius: 8px; overflow: hidden; background: var(--cor); color: var(--texto-cor); font-size: 15px; font-weight: 700; cursor: pointer; }
+.btn-dia:hover:enabled { filter: brightness(1.12); }
+.pontos { align-self: stretch; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; padding: 0 11px; background: rgba(0, 0, 0, .2); }
+.pontos:hover { background: rgba(0, 0, 0, .4); }
+.pontos i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.qtd { margin-top: 6px; padding: 8px; background: #fff; border: 1px solid var(--borda); border-radius: 8px; }
+.qtd label { display: block; font-size: 12px; margin-bottom: 4px; }
+.qtd input { width: 100%; padding: 6px; border: 1px solid #888; border-radius: 6px; }
+
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.grade a { text-align: center; font-size: 11px; color: var(--texto); text-decoration: none; word-break: break-all; }
+.grade img { width: 100%; border-radius: 8px; }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Generator</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="faixa-autor">DSP5</div>
+
+  <header class="topo">
+    <div class="logo-area"><span class="marca">QR <b>Generator</b></span></div>
+    <div class="barra-central">
+      <!-- LOGO: coloque um arquivo chamado logo.png na pasta do projeto e ele aparece aqui, no meio da barra -->
+      <img id="logo" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+    </div>
+    <div class="topo-direita">Até 500 por vez</div>
+  </header>
+
+  <nav class="subtopo"></nav>
+
+  <section class="banner">
+    <div class="banner-texto">
+      <h1>Work hard. Have fun. Make history.</h1>
+    </div>
+  </section>
+
+  <main>
+    <div class="layout">
+      <aside class="card">
+        <h2>Preset do QR Code</h2>
+        <img id="previa" alt="Prévia do QR Code">
+        <p class="legenda">Prévia com a 1ª linha da caixa de texto.</p>
+      </aside>
+
+      <section>
+        <div class="card">
+          <h2>Gerar QR Codes</h2>
+          <textarea id="entrada" rows="10" placeholder="EU_ST-AP-0635_BLK&#10;EU_ST-AP-0625_NVY"></textarea>
+          <div class="acoes">
+            <button id="botao-gerar" class="btn-amarelo">Gerar QR Codes</button>
+            <span id="contador"></span>
+          </div>
+          <progress id="progresso" value="0" max="1"></progress>
+          <div id="mensagem"></div>
+        </div>
+
+        <div class="card">
+          <h2>Pacotes por dia (ZIP)</h2>
+          <p class="legenda">Clique no nome do dia para baixar. Clique nos dois pontinhos para escolher a quantidade.</p>
+          <div id="dias" class="dias"></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="card" id="area-resultados" hidden>
+      <h2>Resultados</h2>
+      <button id="botao-pasta" class="btn-laranja">Salvar QR Codes em uma pasta</button>
+      <div id="resultados" class="grade"></div>
+    </div>
+  </main>
+
+  <footer class="rodape">Made By: pedramou</footer>
+
+  <script src="codigos.js"></script>
+  <script src="qr.js"></script>
+  <script src="zip.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
